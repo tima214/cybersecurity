@@ -1,0 +1,28 @@
+~~~
+#1 create work environment
+create and notepad  new faile : decrypted the encrypted --- itself encrypting 
+open PowerShell then end check openssl --- openssl version 
+then open version OpenSSL 3.5.0 8 Apr 2025 (Library: OpenSSL 3.5.0 8 Apr 2025) maybe differently 
+№2 explanation of why encryption is needed
+encryption is needed to protect your information from intruders and for confidentiality.
+it is also an unsecured part of cybersecurity, helping to send your or another person s information in a more anonymous form and there is a key without which it will not be possible to decrypt.
+also for various very large certificates it is useful to encrypt yourself and store the key in a good place.
+    and encryption is also used to encrypt websites, there is also important information there
+also in social networks such as telegram, github, instagram, etc.
+finances for different banks simply need to be encrypted, for example, the transfer system and to whom, or payment for something through a bank, encryption is also used there
+this end explanation
+#3 and code encrypting aes -- 256
+openssl enc -aes-256-cbc -pbkdf2 -salt -in message.txt -out encrypted.bin -pass pass:her text --- not space
+encrypting: 
+  openssl enc -aes-256-cbc -pbkdf2 -salt -in message.txt -out encrypted.bin -pass pass:hertext
+decrypting :
+  openssl enc -aes-256-cbc -pbkdf2 -in encrypted.bin -out decrypted.txt -pass pass:hertext
+open notepad
+notepad decrypted.txt
+encryption example : Salted__ЛEЪ ·Т‹а=ЋW9:N©9а©—VЩk™§Щ1­ў…сеEцпрдхџх#­ј1DLќMбЋ]}л7эѕµw=ћG№HВлЕв
+Ьz>
+ЂT3°ЛЯ ‚’ґЫnpо,РОeТ-Тжз 
+<  >
+ ||
+ || 
+ #4 //next
