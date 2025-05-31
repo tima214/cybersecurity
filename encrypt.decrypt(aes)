@@ -1,0 +1,37 @@
+
+# Шифрование с расшифровкой
+  about encrypt and checking use decrypting , step by step example: 
+Get started , check openssl 
+  openssl version --->  OpenSSL 3.2.4 11 Feb 2025 (Library: OpenSSL 3.2.4 11 Feb 2025) example 
+im show clasic encrypt: 
+  openssl enc -aes-256-cbc -pbkdf2 -salt -in example.txt -out encrypted.bin -pass pass:yuer text 
+  openssl enc -aes-256-cbc -pbkdf2 -in encrypted.bin -out decrypted.txt -pass pass:yuer text 
+  notepad decrypted.txt ----> end cat decrypted.txt
+
+#explanation1 {
+enc --> indication aes 
+aes --> encrypt myself 
+pbkdf2 --> new encryption system openssl 
+salt --> fuile encrypt indication
+pass --> text 
+} 
+
+# команды encrypted end decrypted
+use encrypt the decrypt:
+  echo "your text" > message.txt 
+  openssl pkeyutl -encrypt -pubin -inkey public.pem -in message.txt -out encrypted.bin 
+  openssl pkeyutl -decrypt -inkey -private.pem -in encrypted.bin -out decrypted.txt
+  cat decrypted.txt --> notepad decrypted.txt 
+  cat message.txt --> notepad message.txt
+  
+#explanation2 {
+> messge.txt --> faile encrypted and decrypted
+pkeyutl --> encryption system
+public.pem and private.pem --> the key encrypted and genpkey (key)
+inkey --> specifies the file with the key
+cat decrypted.txt and notepad decrypted.txt --> and encryping , use encrypted
+cat message.txt and notepad decrypted.txt --> herself decrypted , use decrypt
+} 
+
+the continue encrypt.decrypt(aes) 2 ---> increase encryption bits and encrypt.decrypt(aes) 2
+  --
