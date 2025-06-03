@@ -1,0 +1,31 @@
+#1 Example: you → encrypt, he → decrypt :
+and im encrypt the you friand decrypt , encrypted : 
+echo "you text" > message.txt and secret.txt (file decrypt the encrypt) 
+openssl pkeyutl -encrypt -pubin -inkey friand_public.pem -in message.txt -out encrypted.bin
+explanation :
+{
+friend_public.pem — friend's public key
+
+message.txt — your message
+
+encrypted.bin — encrypted binary file you send
+}
+He decrypts with his private key: 
+openssl pkeyutl -decrypt -inkey private.pem -in encrypted.bin -out decrypted.txt 
+explanation :
+{
+private.pem — his private key
+
+encrypted.bin — the file you sent
+
+decrypted.txt — the decrypted result (will contain your original message)
+}
+
+Why does this work?
+Because in asymmetric encryption:
+
+The public key encrypts
+
+Only the corresponding private key can decrypt
+
+No one else - not even you - can read what's encrypted unless you have their private key.
